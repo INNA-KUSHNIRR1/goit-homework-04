@@ -51,7 +51,12 @@ button {
   background-color: #fff;
   border-bottom: 1px solid var(--CORNFLOWER, #e7e9fc);
   flex-shrink: 0;
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
+box-shadow: зі значенням 0px 2px 1px rgba(46, 47, 66, 0.08),
+  0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 .page-nav {
   display: flex;
   align-items: center;
@@ -136,8 +141,9 @@ button {
     ),
     url(/images/people-office.jpg);
   background-repeat: no-repeat;
-  background-size: 1440px;
   background-position: 50% 50%;
+  background-size: cover;
+  max-width: 1440px;
 }
 
 .container.hero {
@@ -215,6 +221,10 @@ button {
   width: calc((100% - 3 * 24px) / 4);
 }
 .advantages-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 112px;
   border-radius: 4px;
   border: 1px solid var(--LIGHT-SLATE, #8e8f99);
   background: var(--CLOUD, #f4f4fd);
@@ -347,6 +357,7 @@ button {
 
 .portfolio-card {
   width: calc((100% - 2 * 24px) / 3);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-card:hover {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
@@ -408,6 +419,7 @@ button {
 }
 .container.footer {
   display: flex;
+  align-items: baseline;
 }
 .footer-wrapper {
   display: flex;
